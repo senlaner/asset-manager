@@ -1,5 +1,5 @@
 {
-    "name": "modbase/asset-manager",
+    "name": "summerblue/asset-manager",
     "description": "A very basic asset manager to be used in combination with versioned assets.",
     "license": "MIT",
     "authors": [
