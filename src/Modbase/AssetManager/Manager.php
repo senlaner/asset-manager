@@ -42,13 +42,7 @@ class Manager {
             $this->parseVersionsFile();
         }
 
-        // Create link tags for all stylesheets
-        foreach ($this->data[$bundle.'.styles'] as $style)
-        {
-            $styles[] = '<link rel="stylesheet" href="/css/'.$style.'" />'.PHP_EOL;
-        }
-
-        return join(PHP_EOL, $styles);
+        return $this->data[$bundle.'.styles'][0];
     }
 
     /**
@@ -65,13 +59,7 @@ class Manager {
             $this->parseVersionsFile();
         }
 
-        // Create script tags for all JavaScripts
-        foreach ($this->data[$bundle.'.scripts'] as $script)
-        {
-            $scripts[] = '<script src="/js/'.$script.'"></script>'.PHP_EOL;
-        }
-
-        return join(PHP_EOL, $scripts);
+        return $this->data[$bundle.'.scripts'][0];
     }
 
     /**
